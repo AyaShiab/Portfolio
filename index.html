@@ -1,0 +1,473 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="bg-white">
+      <nav class="bg-indigo-900">
+        <div class="container flex flex-col items-center p-6 mx-auto">
+          <div
+            class="flex items-center justify-center mt-2 text-white capitalize"
+          >
+            <a
+              href="#home"
+              class="mx-2 border-b-2 border-transparent hover:text-white hover:border-amber-500 sm:mx-6"
+              >home</a
+            >
+
+            <a
+              href="#about"
+              class="mx-2 border-b-2 border-transparent hover:text-white hover:border-amber-500 sm:mx-6"
+              >About</a
+            >
+
+            <a
+              href="#skills"
+              class="mx-2 border-b-2 border-transparent hover:text-white hover:border-amber-500 sm:mx-6"
+              >Skills</a
+            >
+
+            <a
+              href="#projects"
+              class="mx-2 border-b-2 border-transparent hover:text-white hover:border-amber-500 sm:mx-6"
+              >Projects</a
+            >
+
+            <a
+              href="#contact"
+              class="mx-2 border-b-2 border-transparent hover:text-white hover:border-amber-500 sm:mx-6"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <div
+        id="home"
+        class="container flex flex-col px-10 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center mt-10"
+      >
+        <div class="flex flex-col items-center w-full lg:flex-row lg:w-1/2">
+          <div
+            class="flex justify-center order-2 mt-6 lg:mt-0 lg:space-y-3 lg:flex-col"
+          ></div>
+
+          <div class="pl-24 max-w-lg lg:mx-12 lg:order-2 text-center">
+            <h1
+              class="text-4xl font-semibold tracking-wide text-gray-800 dark:text-white lg:text-4xl"
+            >
+              Hi, I'm Aya
+            </h1>
+            <p class="text-3xl mt-4 text-gray-800 dark:text-gray-300">
+              I'm a full-stack developer
+            </p>
+
+            <div class="mt-6">
+              <a href="#about">
+                <button
+                  class="btn px-6 py-2.5 border rounded-lg relative border-amber-500 border-solid inline-flex items-center justify-start overflow-hidden transition-all bg-white rounded hover:bg-white group"
+                >
+                  <span
+                    class="w-0 h-0 rounded bg-amber-400 absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"
+                  ></span>
+                  <span
+                    class="text-l w-full text-black transition-colors duration-300 ease-in-out group-hover:text-white z-10"
+                  >
+                    See more!
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mr-20 flex items-center justify-center w-full h-100 lg:w-3/5"
+        >
+          <img
+            class="mt-8 object-cover w-full h-full max-w-2xl rounded-lg"
+            src="https://camo.githubusercontent.com/b7e84cd7df9d883ebab3618b73506c04d2b867b5249291268930f0ab1f02e2e2/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f70726163746963616c6465762f696d6167652f66657463682f732d2d32625a496a5047432d2d2f635f6c696d6974253243665f6175746f253243666c5f70726f6772657373697665253243715f3636253243775f3838302f68747470733a2f2f6465762d746f2d75706c6f6164732e73332e616d617a6f6e6177732e636f6d2f692f64347476756b6274356d726133376376776b6c6b2e676966"
+            alt="welcome"
+          />
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="mt-10 bg-white dark:bg-gray-900">
+      <div class="max-w-6xl px-6 py-10 mx-auto">
+        <div class="text-center">
+          <h1
+            class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white mt-10"
+          >
+            About
+          </h1>
+        </div>
+
+        <hr class="my-8 border-gray-200 dark:border-gray-700" />
+
+        <main
+          class="relative z-20 w-full mt-8 md:flex md:items-center xl:mt-12"
+        >
+          <div
+            class="absolute w-full bg-indigo-900 -z-10 md:h-96 rounded-2xl"
+          ></div>
+
+          <div
+            class="w-full p-6 bg-indigo-900 md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly"
+          >
+            <img
+              class="h-24 w-24 md:mx-6 border rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl"
+              src="./aya.jpg"
+              alt="personal photo"
+            />
+
+            <div class="mt-2 md:mx-6">
+              <div>
+                <p class="text-xl font-medium tracking-tight text-white">
+                  Aya Shiab
+                </p>
+              </div>
+
+              <p class="mt-4 text-lg leading-relaxed text-white md:text-xl">
+                A full-stack developer adept with front-end and back-end
+                development processes using JavaScript, HTML, and CSS. Keen to
+                develop skills in a fast-paced environment, determined to learn
+                new technologies and coding languages.
+              </p>
+
+              <div
+                class="flex items-center justify-between mt-6 md:justify-start"
+              >
+                <a href="./AyaShiab.pdf" target="_blank"
+                  ><button
+                    class="btn px-6 py-2.5 border-2 rounded-lg relative border-amber-400 border-solid inline-flex items-center justify-start overflow-hidden transition-all bg-white rounded hover:bg-white group"
+                  >
+                    <span
+                      class="w-0 h-0 rounded bg-amber-400 absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"
+                    ></span>
+                    <span
+                      class="text-l w-full text-black transition-colors duration-300 ease-in-out group-hover:text-white z-10"
+                    >
+                      View Resume
+                    </span>
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <section id="skills" class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-10 mx-auto">
+        <div class="text-center">
+          <h1
+            class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white"
+          >
+            Skills
+          </h1>
+        </div>
+
+        <hr class="my-8 border-gray-200 dark:border-gray-700" />
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div class="rounded-lg">
+            <div class="border rounded-lg">
+              <img
+                class="object-cover object-center pt-16 pb-12"
+                width="100%"
+                height="75%"
+                layout="responsive"
+                src="https://cdn.dribbble.com/users/759099/screenshots/2915547/comp_3_1.gif"
+                alt="back-end"
+              />
+            </div>
+            <div class="mt-8 ml-8 mb-0">
+              <h1
+                class="mt-4 text-xl font-semibold text-gray-800 dark:text-white"
+              >
+                Backend
+              </h1>
+            </div>
+            <p class="mt-2 ml-8 text-gray-500 dark:text-gray-400">
+              Node.js, Express.js, API, and data structure.
+            </p>
+          </div>
+
+          <div class="rounded-lg">
+            <div class="border rounded-lg">
+              <img
+                class="object-cover object-center pt-16 pb-12"
+                width="100%"
+                height="75%"
+                layout="responsive"
+                src="https://cdn.dribbble.com/users/321983/screenshots/2262084/ui-engine-icon.gif"
+                alt="front-end"
+              />
+            </div>
+            <div class="mt-8 ml-8 mb-0">
+              <h1
+                class="mt-4 text-xl font-semibold text-gray-800 dark:text-white"
+              >
+                Frontend
+              </h1>
+            </div>
+            <p class="mt-2 ml-8 text-gray-500 dark:text-gray-400">
+              React.js, Redux, HTML5, CSS, Bootstrap, and jQuery.
+            </p>
+          </div>
+
+          <div class="rounded-lg">
+            <div class="border rounded-lg">
+              <img
+                class="object-cover object-center"
+                width="100%"
+                height="75%"
+                layout="responsive"
+                src="https://www.conseqta.com/img/home/why-what-icons/cylinder.gif"
+                alt="db"
+              />
+            </div>
+            <div class="mt-8 ml-8 mb-0">
+              <h1
+                class="mt-4 text-xl font-semibold text-gray-800 dark:text-white"
+              >
+                Database
+              </h1>
+            </div>
+            <p class="mt-2 ml-8 text-gray-500 dark:text-gray-400">
+              MongoDB, PostgreSQL.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-10 mx-auto text-center">
+        <h1
+          class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white"
+        >
+          Projects
+        </h1>
+
+        <hr class="my-8 border-gray-200 dark:border-gray-700" />
+
+        <p class="mt-4 text-center text-gray-500 dark:text-gray-300"></p>
+
+        <div
+          class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2"
+        >
+          <div
+            class="overflow-hidden bg-cover rounded-lg cursor-pointer h-96 group"
+            style="background-image: url('./home.png')"
+          >
+            <div
+              class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100"
+            >
+              <h2 class="mt-4 text-xl font-semibold text-white capitalize">
+                Shopping Spot
+              </h2>
+              <p class="mt-2 text-lg tracking-wider text-white uppercase">
+                Shopping spot is an e-commerce app that aims to provide
+                different types of products at the same place and facilitate the
+                product purchase process. It allows you to view various products
+                with the best prices, browse their images, descriptions, and
+                customer reviews, and choose products of interest. Products can
+                be added to your wishlist or your shopping cart. Also, the
+                shopping spot application provides a user-friendly design to
+                ensure the best user experience.
+              </p>
+              <div class="flex justify-end mt-4">
+                <a href="https://youtu.be/mBIfJmDhppY" target="_blank"
+                  ><img
+                    class="p-0 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800 mr-4"
+                    src=" 
+              https://img.icons8.com/bubbles/100/000000/circled-play.png"
+                    style="width: 50px"
+                /></a>
+
+                <a
+                  href="https://github.com/C7-AyaShiab/MERAKI_Academy_Project_4"
+                  target="_blank"
+                  ><img
+                    class="p-0 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800"
+                    src=" 
+              https://img.icons8.com/bubbles/100/000000/code-file.png"
+                    style="width: 50px"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="overflow-hidden bg-cover rounded-lg cursor-pointer h-96 group"
+            style="background-image: url('./Screenshot_123.png')"
+          >
+            <div
+              class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100"
+            >
+              <h2 class="mt-4 text-xl font-semibold text-white capitalize">
+                Nigh
+              </h2>
+              <p class="mt-2 text-lg tracking-wider text-white uppercase">
+                Nigh is a social media website that helps people stay in touch
+                with their family and friends. As social media platform Nigh
+                comes with a simple design to allow other users to design their
+                profiles and pages with pictures and posts.
+              </p>
+              <div class="flex justify-end mt-4">
+                <a href="https://youtu.be/ZMGFkv-_OSs" target="_blank"
+                  ><img
+                    class="p-0 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800 mr-4"
+                    src=" 
+                https://img.icons8.com/bubbles/100/000000/circled-play.png"
+                    style="width: 50px"
+                /></a>
+                <a
+                  href="https://github.com/AyaShiab/MERAKI_Academy_Project_5/tree/main"
+                  target="_blank"
+                  ><img
+                    class="p-0 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800"
+                    src=" 
+                https://img.icons8.com/bubbles/100/000000/code-file.png"
+                    style="width: 50px"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-12 mx-auto">
+        <div class="text-center">
+          <h1
+            class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white mt-10"
+          >
+            Contact Info
+          </h1>
+
+          <hr class="my-8 border-gray-200 dark:border-gray-700" />
+        </div>
+
+        <div
+          class="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 lg:grid-cols-3"
+        >
+          <div class="flex flex-col items-center justify-center text-center">
+            <img
+              class="p-0 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800"
+              src=" https://img.icons8.com/bubbles/100/000000/map-marker.png"
+              style="width: 74px"
+            />
+
+            <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">
+              Email
+            </h2>
+            <p class="mt-2 text-gray-500 dark:text-white-400">
+              shiab.ayah@gmail.com
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center justify-center text-center">
+            <img
+              class="p-0 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800"
+              src="https://img.icons8.com/bubbles/100/000000/phone.png"
+              style="width: 74px"
+            />
+
+            <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">
+              Phone
+            </h2>
+            <p class="mt-2 text-gray-500 dark:text-white-400">
+              +962 790 217 852
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center justify-center text-center">
+            <img
+              class="p-0 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800"
+              src="https://img.icons8.com/bubbles/100/000000/new-post.png"
+              style="width: 74px"
+            />
+
+            <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">
+              Address
+            </h2>
+            <p class="mt-2 text-gray-500 dark:text-white-400">Amman-Jordan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-indigo-900 dark:bg-gray-900">
+      <div class="container px-6 mx-auto">
+        <hr class="my-5 border-gray-200 dark:border-gray-700" />
+
+        <div
+          class="flex flex-col items-center sm:flex-row sm:justify-center pb-5"
+        >
+          <div
+            class="text-8xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400"
+          >
+            <a
+              href="https://github.com/AyaShiab"
+              target="_blank"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-5 h-6"
+                fill="white"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">GitHub account</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ayashiab/"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-5 h-7"
+                fill="white"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                />
+              </svg>
+              <span class="sr-only">linkedIn account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./main.js"></script>
+</html>
